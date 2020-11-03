@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тест оплаты</title>
+</head>
+
+<body>
+    <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" target="_blank">
+        <input type="hidden" name="receiver" value="41001851773851">
+        <input type="hidden" name="label" value="InvoiceTestNumber0">
+        <input type="hidden" name="quickpay-form" value="shop">
+        <input type="hidden" name="targets" value="Test pay">
+        <input type="hidden" name="formcomment" value="Test pay">
+        <input type="hidden" name="short-dest" value="Test pay">
+        <input type="hidden" name="sum" value="10" data-type="number">
+        <input type="hidden" name="need-fio" value="false">
+        <input type="hidden" name="need-email" value="true">
+        <input type="hidden" name="need-phone" value="false">
+        <input type="hidden" name="need-address" value="false">
+        <p>
+            10
+        </p>
+
+        <select name="paymentType">
+            <option value="PC">Яндекс.Деньгами</option>
+            <option selected value="AC">Банковской картой</option>
+        </select>
+        <input class="button is-primary" type="submit" value="Оплатить">
+    </form>
+</body>
+
+</html>
